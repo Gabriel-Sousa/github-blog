@@ -36,6 +36,4 @@ html{
     font-size: 1rem
   }
 
-  
-
 `

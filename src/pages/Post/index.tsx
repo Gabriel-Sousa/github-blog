@@ -32,7 +32,7 @@ export function Post() {
             </Link>
 
             <a href={dataPost.html_url} target={'_blank'} rel="noreferrer">
-              <span>GITHUB</span>
+              <span>ver no github</span>
               <ArrowSquareUpRight size={12} />
             </a>
           </div>

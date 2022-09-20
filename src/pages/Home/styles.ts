@@ -140,13 +140,12 @@ export const SearchContainer = styled.form`
 export const MainContent = styled.main`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(26rem, 2fr));
-  justify-content: center;
 
   margin-top: 3rem;
   grid-gap: 2rem;
 
   .card {
-    width: 26rem;
+    width: 100%;
     padding: 2rem;
     border-radius: 10px;
     background: ${(props) => props.theme['gray-700']};
@@ -160,7 +159,7 @@ export const MainContent = styled.main`
 
     .titleCard {
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       gap: 1rem;
 
       span {

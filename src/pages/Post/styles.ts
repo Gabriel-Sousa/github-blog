@@ -11,7 +11,7 @@ export const PostContent = styled.div`
 export const HeaderOfPost = styled.header`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
 
   border-radius: 10px;
 
@@ -25,6 +25,7 @@ export const HeaderOfPost = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-transform: uppercase;
 
     > a:first-of-type {
       display: flex;
@@ -91,6 +92,16 @@ export const MainContainer = styled.main`
 
     color: ${(props) => props.theme['gray-300']};
     margin-top: 1rem;
+  }
+
+  a {
+    color: ${(props) => props.theme['blue-500']};
+    text-decoration: none;
+
+    transition: border-bottom 0.2s ease-in-out;
+    :hover {
+      border-bottom: 1px solid ${(props) => props.theme['blue-500']};
+    }
   }
 
   pre {

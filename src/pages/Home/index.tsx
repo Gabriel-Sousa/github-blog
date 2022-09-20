@@ -78,12 +78,7 @@ export function Home() {
     const formData = new FormData(event.target as HTMLFormElement)
     const data = Object.fromEntries(formData)
 
-    if (!data.filter) {
-      // eslint-disable-next-line no-useless-return
-      return
-    } else {
-      setSearch(data.filter as string)
-    }
+    setSearch(data.filter as string)
   }
 
   function handlePost(dataPost: IssuesItem) {
@@ -123,8 +118,8 @@ export function Home() {
                 {informationAboutUser.followers === 0
                   ? informationAboutUser.followers + ' Seguidores'
                   : informationAboutUser.followers >= 2
-                  ? informationAboutUser.followers + ' Seguidores'
-                  : informationAboutUser.followers + ' Seguidor'}
+                    ? informationAboutUser.followers + ' Seguidores'
+                    : informationAboutUser.followers + ' Seguidor'}
               </span>
             </footer>
           </div>

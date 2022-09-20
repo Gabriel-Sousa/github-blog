@@ -24,10 +24,24 @@ interface IssueContextProviderProps {
 export const IssuesContext = createContext({} as IssuesContextType)
 
 export function PostContextProvider({ children }: IssueContextProviderProps) {
-  const [dataPost, setDataPost] = useState({} as Issue)
+  const [dataPost, setDataPost] = useState(() => {
+    const storedStateAsJSON = localStorage.getItem(
+      '@github-blog:post-state-1.0.0',
+    )
+
+    if (storedStateAsJSON) {
+      return JSON.parse(storedStateAsJSON)
+    }
+
+    return {} as Issue
+  })
 
   function onShowPost(data: Issue) {
     setDataPost(data)
+
+    const stateJSON = JSON.stringify(data)
+
+    localStorage.setItem('@github-blog:post-state-1.0.0', stateJSON)
   }
 
   return (
