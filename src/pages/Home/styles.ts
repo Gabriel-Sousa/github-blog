@@ -142,6 +142,7 @@ export const MainContent = styled.main`
   grid-template-columns: repeat(auto-fill, minmax(26rem, 2fr));
 
   margin-top: 3rem;
+  margin-bottom: 3rem;
   grid-gap: 2rem;
 
   .card {
